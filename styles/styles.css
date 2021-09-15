@@ -186,16 +186,23 @@ Header stylings
     width: 80vw;
     margin: 30px auto 50px auto;
     position: relative;
+    height: 80vh;
+    display: grid;
+    place-items: center;
 }
 
 .main-content h1 {
     width: 100%;
     text-align: center;
-    margin: 30px auto 10px auto;
+    margin: 0px auto 0 auto;
     line-height: 1.5;
     text-transform: capitalize;
     font-size: 3rem;
     position: relative;
+}
+
+.top-head h2 {
+    margin-top: 6px;
 }
 
 .space {
@@ -292,16 +299,12 @@ Header stylings
     margin: 0;
 }
 
-.carousel-btn:hover {
-    border: 2px solid white;
-}
-
 .prev-btn {
-    left: -30px;
+    left: 0px;
 }
 
 .next-btn {
-    right: -30px;
+    right: 0px;
 }
 
 header h2 {
@@ -313,6 +316,10 @@ header h2 {
 
     .main-content {
         max-width: 800px;
+    }
+
+    .carousel-btn:hover {
+        border: 2px solid white;
     }
 
     .prev-btn {
@@ -513,7 +520,7 @@ about stylings
 
 .review-wrap {
     max-width: 800px;
-    margin: 64px auto 12px auto;
+    margin: 32px auto 12px auto;
 }
 
 .review {        
@@ -592,7 +599,7 @@ about stylings
 
 #review-info {
     line-height: 1.5;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
     padding: 0 5%;
 }

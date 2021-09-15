@@ -49,7 +49,7 @@ scrollLinks.forEach(link => {
             position = position - navHeight;
         }
 
-        if (navHeight > 94) {
+        if (navHeight > 95) {
             position = position + containerHeight + 1;
         }
         
@@ -73,21 +73,6 @@ const carousel = document.querySelector('.carousel');
 // start by moving the last slide to before the first slide
 carousel.insertBefore(slides[slides.length - 1], slides[0]);
 
-// carouselAuto();
-
-// function carouselAuto() {
-//     slides = document.querySelectorAll('.slide');
-//     let activeSlide = document.querySelector('.active');
-//     let next = activeSlide.nextElementSibling;
-
-//     carousel.appendChild(slides[0]);
-
-//     activeSlide.classList.remove('active');
-//     next.classList.add('active');
-
-//     setTimeout(carouselAuto, 2000);
-// }
-
 nextBtn.addEventListener('click', function() {
     // must refresh slide array because each slide's position will have changed!
     slides = document.querySelectorAll('.slide');
@@ -100,6 +85,9 @@ nextBtn.addEventListener('click', function() {
     // moves active class from old slide to its sibling
     activeSlide.classList.remove('active');
     next.classList.add('active');
+
+    clearTimeout(t);
+    t = setTimeout(carouselAuto, 5000);
 });
 
 prevBtn.addEventListener('click', function() {
@@ -194,7 +182,7 @@ const reviews = [
         name: 'unit 62345',
         title: 'death star times',
         img: 'images/reviewers/elisabeth-pieringer-stormtrooper-unsplash.jpg',
-        text: "I'm baby selvage selfies master cleanse lyft man braid aesthetic fanny pack truffaut palo santo kickstarter af yr viral photo booth mumblecore. IPhone kitsch fixie wayfarers everyday carry. Bespoke gochujang microdosing, 8-bit skateboard salvia tousled kickstarter waistcoat. Man bun typewriter hella kombucha.",
+        text: "I'm baby selvage selfies master cleanse lyft man braid aesthetic fanny pack truffaut palo santo kickstarter af yr viral photo booth mumblecore. IPhone kitsch fixie wayfarers everyday carry. Man bun typewriter hella kombucha.",
     },
     {
         id: 3,
@@ -208,7 +196,7 @@ const reviews = [
         name: 'billy bob',
         title: 'new york times',
         img: 'images/reviewers/alan-hardman-unsplash.jpg',
-        text: "Jean shorts try-hard ugh kale chips, poke biodiesel man braid succulents synth la croix. Chartreuse green juice marfa poutine skateboard yuccie yr tousled. Tacos distillery bitters organic neutra portland brunch. Mlkshk chia neutra, fingerstache hexagon pickled sriracha normcore.",
+        text: "Jean shorts try-hard ugh kale chips, poke biodiesel man braid succulents synth la croix. Chartreuse green juice marfa poutine skateboard yuccie yr tousled. Mlkshk chia neutra, fingerstache hexagon pickled sriracha normcore.",
     }
 ];
 
