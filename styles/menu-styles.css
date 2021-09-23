@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e1dabd;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1, h4 {
+    font-family: 'Space Mono', monospace;
+}
+
+.menu {
+    padding: 5rem 0;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+========
+Header stylings
+========
+ */
+
+
+/* <-- nav stylings --> */
+
+.nav-container {
+    background: center / cover no-repeat url("../images/paul-volkmer-small.jpg");
+}
+
+@media screen and (min-width: 675px) {
+    .nav-container {
+        background: center / cover no-repeat url("../images/paul-volkmer-med.jpg");
+    }
+}
+
+.nav-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo-container {
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+.logo {
+    padding: 10px 10px;
+    font-size: 3rem;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-toggle {
+    font-size: 3rem;
+    color: white;
+    background: transparent;
+    border: transparent;
+    transition: all 0.3s linear;
+}
+
+.nav-toggle:hover {
+    transform:rotate(180deg);
+}
+
+.nav-toggle:active {
+    font-size: 2.5rem;
+    color: #0D1010;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100vw;
+}
+
+/* <-- links --> */
+
+.links-container {
+    padding: 0 20px;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    height: 0;
+    overflow: hidden;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: all 0.3s linear;
+    display: block;
+}
+
+.links a:hover {
+    padding-left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color:#3b2349;
+}
+
+.social-icons {
+    display: none;
+}
+
+.order-online {
+    color: white;
+    font-size: 1.8rem;
+    max-width: 200px;
+    margin-right: 5px;
+}
+
+.order-online a {
+    text-decoration: underline;
+}
+
+.nav-center {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 450px) {
+    .order-online {
+        max-width: 300px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 675px) {
+
+    .links-container {
+        height: auto !important;
+    }
+
+    .links {
+        height: auto;
+        display: flex;
+        font-size: 2rem;
+    }
+
+    .links a {
+        transition: all 0.3s linear;
+        margin: 0 10px;
+    }
+    
+    .links a:hover {
+        color:#3b2349;
+        padding: 5px 0;
+        background: none;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+
+    .social-icons a {
+        color: white;
+        font-size: 18px;
+        transition: all .3s linear;
+        margin: 0 5px;
+    }
+
+    .social-icons a:hover {
+        color:#3b2349;
+    }
+}
+
+/* 
+========
+title styles
+========
+*/
+
+.title {
+    color: #1d1124;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title h1 {
+    letter-spacing: 1px;
+    font-size: 4rem;
+}
+
+.underline {
+    background: #1d1124;
+    height: 0.25rem;
+    width: 10rem;
+    margin: 5px auto;
+}
+
+/* 
+========
+button styles
+========
+*/
+
+.btn-container {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 450px) {
+    .btn-container {
+        max-width: 600px;
+    }
+}
+
+.filter-btn {
+    margin: 5px 0.5rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: transparent;
+    color: #1d1124;
+    border-color: #1d1124;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+.filter-btn:hover {
+    color: #e1dabd;
+    background:#1d1124;
+}
+
+/* 
+========
+menu item styles
+========
+*/
+
+.section-center {
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem 2rem;
+    justify-items: center;
+    width: 90vw;
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 400px;
+}
+
+@media screen and (min-width: 660px) {
+    .menu-item {
+        grid-template-columns: 1fr 1fr;
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .section-center {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.menu-img {
+    object-fit: cover;
+    height: 200px;
+    border-radius: 8px;
+    border: 4px solid #1d1124;
+}
+
+.menu-info {
+    color: #1d1124;
+}
+
+.menu-info header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    border-bottom: 2px dotted #1d1124;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.menu-info header h4 {
+    margin-bottom: 8px;
+}
+
+.item-text {
+    font-size: 1.6rem;
+    padding-top: 16px;
+}
+
+/* 
+========
+footer stylings
+========
+*/
+
+footer {
+    background-color: black;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+}
+
+.upper-footer {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.upper-footer p {
+    margin: 0;
+    padding: 20px 0 20px 0;
+    font-size: 2rem;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.footer-socials a{
+    transition: all 0.3s linear;
+
+}
+
+.footer-socials a:hover {
+    color:#3b2349;
+}
+
+.footer-break {
+    background: white;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.lower-footer {
+    margin: 0 auto;
+    width: 80%;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
